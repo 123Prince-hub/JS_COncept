@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chagne_color</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // First method ********************************************
+            // // change font color black to red
+            // document.querySelector('#red').onclick = function () {
+            //     document.querySelector('#hello').style.color = 'red';
+            // }
+
+            // // change font color black to blue
+            // document.querySelector('#blue').onclick = function () {
+            //     document.querySelector('#hello').style.color = 'blue';
+            // }
+
+            // // change font color black to 
+            // document.querySelector('#yellow').onclick = function () {
+            //     document.querySelector('#hello').style.color = 'yellow';
+            // }
+
+
+            // second method ********************************************
+            // document.querySelectorAll('button').forEach(button => {
+                //     button.onclick = function(){
+                    //         document.querySelector('#hello').style.color = button.dataset.color;
+                    //     }
+                    // })
+                    
+            // Third method ********************************************
+            document.querySelector('select').onchange = function () {
+                document.querySelector('#hello').style.color = this.value;
+            }
+        })
+    </script>
+</head>
+<body>
+    <h1 id="hello">Hello</h1>
+    <!-- First type -->
+        <!-- <button id="red">Red</button>
+        <button id="blue">Blue</button>
+        <button id="yellow">Yellow</button> -->
+
+    <!-- Second type -->
+    <!-- <button data-color="red">Red</button>
+        <button data-color="blue">Blue</button>
+        <button data-color="yellow">Yellow</button> -->
+
+    <!-- Third type -->
+    <select name="" id="">
+        <option value="black">Black</option>
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+    </select>
+</body>
+</html>
